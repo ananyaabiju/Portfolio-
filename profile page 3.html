@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDEN - Ananya's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #54624e;
+            color: #fff;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            background-color: #54624e;
+            margin-top: -12.7px;
+        }
+
+        .logo a {
+            font-size: 14px;
+            font-weight: regular;
+            color: #ffffff; 
+            transition: color 0.3s; 
+            text-decoration: none; 
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 100px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; 
+            font-size: 14px;
+            transition: color 0.3s; 
+        }
+
+        
+        .logo a:hover, nav ul li a:hover {
+            color: #FF670A; 
+        }
+
+        .intro-section {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            padding: 20px;
+            height: calc(100vh - 100px); 
+            margin-top: -50px; 
+            position: relative; 
+        }
+
+        .border-container {
+            display: flex; 
+            border: 2px solid #FF670A; 
+            border-radius: 1px; 
+            padding: 10px; 
+            position: relative; 
+        }
+
+        .image-wrapper {
+            overflow: hidden; 
+            position: relative; 
+        }
+
+        .intro-section img {
+            width: 400px; 
+            height: auto; 
+            margin-right: 20px; 
+            margin-left: 20px;
+            display: block; 
+            transition: transform 0.5s ease; 
+        }
+
+       
+        .hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px; 
+            height: auto; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+        }
+
+       
+        .image-wrapper:hover img {
+            transform: scale(1.1); 
+        }
+
+        .image-wrapper:hover .hover-image {
+            opacity: 1; 
+        }
+
+        .intro-text {
+            max-width: 600px; 
+            padding-left: 150px; 
+            top: 100px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #54624e;
+            font-size: 15px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            right: 0;
+            height: 2px;
+            background-color: #a0b3a5;
+            z-index: 0;
+        }
+
+        .footer-left {
+            color: #ffffff;
+            font-size: 15px;
+            padding-left: 100px;
+            position: relative;
+            z-index: 1;
+            padding-top: 80px;
+        }
+
+        .footer-right {
+            color: #ffffff;
+            padding-right: 10px;
+            text-align: left;
+            position: relative;
+            font-size: 15px;
+            z-index: 1;
+            padding-top: 110px;
+        }
+
+        .footer-right a {
+            color: #ffffff;
+            text-decoration: none;
+            text-align: left;
+            padding-right: 50px;
+        }
+
+        .footer-right a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-image {
+            height: 400px;
+            position: relative;
+            margin-right: -30px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="file:///C:/Users/Anu/Documents/HTML/index.html" id="ANANYA">ANANYA</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/Anu/Downloads/portfolio%20page%202.html">EDEN</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/profile%20page%203.html" id="eden" style="text-decoration: none; color: #FF670A;">PROFILE</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/contact%20page%204.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro-section">
+        <div class="border-container">
+            <div class="image-wrapper">
+                <img src="https://i.pinimg.com/736x/43/34/c5/4334c549e1122671614349d5b39d64fd.jpg" alt="Ananya Illustration">
+                <img class="hover-image" src="https://i.pinimg.com/736x/4b/f4/26/4bf426d857010030b2a27abf79241114.jpg" alt="Hover Image">
+            </div>
+        </div>
+        <div class="intro-text">
+            <p>HI THERE, AM JUST A NORMAL FUN GIRL WHO LOVES SKETCHING AND DESIGNING, BUT AS FOR PROFESSION I WOULD CHOOSE TO BE A DESIGNER THAN AN ARTIST.<br><br><br>
+            WELL TALKING ABOUT MYSELF I LOVE OCEAN, GRASS AND ANIMALS. I LOVE TO PAINT FRUITS, ANIMALS, VEGGIES. WHICH IS LIKE A THERAPY TO ME, IT GIVES ME A MINDFUL EXPERIENCE, FILLING ON THE DETAILS ADDING MORE COLORS HELPS ME CALM MY MIND. I FIND MYSELF AS SOMEONE WHO IS CONNECTED TO NATURE, I WOULD GO SIT ON TOP OF HILLS AND STARE INTO THE INFINITY FOR HOURS AND STILL WOULD NEVER GET BORED OF IT.<br><br><br>
+
+            I NEVER THOUGHT BEING A DESIGNER WAS POSSIBLE IN MY HOUSEHOLD AS AN INDIAN WHERE EVERYONE EXPECT YOU TO BE AN ENGINEER, DOCTOR OR TEACHER BUT NEVER A DESIGNER, I MEAN THEY ARE LIKE ISN’T THAT JUST DRAWING ON A PIECE OF PAPER. HONESTLY EVEN I THOUGHT IT WAS JUST MAKING SCREENS OR AN APP BUT RECENTLY I DISCOVERED IT IS MORE THAN THAT. <br><br><br>
+            FUN THINGS, AM GOOD AT MAKING PEOPLE LAUGH WITH FLOP JOKES, MASTER PROCASTINATOR, READS A LITTLE, LOVES ALL COOL MOVIES, MAKES STUFF WITH CLAY, DREAM IS TO MAKE MY BAG FILLED WITH STICKERS,PINS AND CHARMS. LOVES CATS AND DOGS, My brain has a strict 5-minute focus limit, and after that, it’s WONT BE ABLE TO PROCESS ANYTHING FOR A WHILE.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-left">
+            <p>Bangalore,<br> India</p>
+        </div>
+        <div class="footer-right">
+            <p>
+                <a href="https://www.linkedin.com/in/ananya-biju-6090ba236/">LinkedIn</a><br>
+                <a href="https://www.instagram.com/ananyaabiju/">Instagram</a><br>
+                <a href="https://www.behance.net/ananyabiju">Behance</a><br>
+                <a href="mailto:meananyabijua@gmail.com">meananyabiju@gmail.com</a>
+            </p>
+        </div>
+        <img src="https://i.pinimg.com/736x/a8/51/e9/a851e94e908c594c614d1d311d6c40b0.jpg" alt="Duck illustration" class="footer-image">
+    </footer>
+
+</body>
+</html>

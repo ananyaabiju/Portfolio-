@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDEN - Ananya's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #54624e;
+            color: #fff;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            background-color: #54624e;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: regular;
+            margin-top: 3.8px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo a:hover {
+            color: #FF670A; 
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0; 
+            padding: 0; 
+            margin-top: 3.4px;
+        }
+
+        nav ul li {
+            margin-left: 100px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #FF670A;
+        }
+
+        .postcard-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px;
+            margin-top: 100px;
+            padding-left: 200px;
+        }
+
+        .postcard {
+            position: relative;
+            width: 400px;
+            height: 250px;
+        }
+
+        .postcard img {
+            position: absolute;
+            transition: transform 0.4s, z-index 0.4s;
+        }
+
+        .set1 .postcard-back {
+            width: 400px;
+            z-index: 0;
+            transform: rotate(-12deg);
+        }
+
+        .set1 .postcard-front {
+            width: 400px;
+            z-index: 1;
+            transform: rotate(-12deg);
+            left: 20px;
+            top: 20px;
+        }
+
+        .set2 .postcard-back {
+            width: 400px;
+            z-index: 0;
+            transform: rotate(-12deg);
+        }
+
+        .set2 .postcard-front {
+            width: 400px;
+            z-index: 1;
+            transform: rotate(-12deg);
+            left: 20px;
+            top: 20px;
+        }
+
+        .set3 .postcard-back {
+            width: 400px;
+            z-index: 0;
+            transform: rotate(-12deg);
+            top: 80px;
+        }
+
+        .set3 .postcard-front {
+            width: 400px;
+            z-index: 1;
+            transform: rotate(-12deg);
+            left: 20px;
+            top: 100px;
+        }
+
+        .set4 .postcard-back {
+            width: 400px;
+            z-index: 0;
+            transform: rotate(-12deg);
+            top: 80px;
+        }
+
+        .set4 .postcard-front {
+            width: 400px;
+            z-index: 1;
+            transform: rotate(-12deg);
+            left: 30px;
+            top: 100px;
+        }
+
+        .postcard:hover .postcard-back {
+            z-index: 2;
+            transform: translate(20px, 20px) rotate(-12deg);
+        }
+
+        .postcard:hover .postcard-front {
+            z-index: 0;
+            transform: translate(-20px, -20px) rotate(-12deg);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #54624e;
+            font-size: 15px;
+            margin-top: 200px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            right: 0;
+            height: 2px;
+            background-color: #a0b3a5;
+            z-index: 0;
+        }
+
+        .footer-left {
+            color: #ffffff;
+            font-size: 15px;
+            padding-left: 100px;
+            position: relative;
+            z-index: 1;
+            padding-top: 80px;
+        }
+
+        .footer-right {
+            color: #ffffff;
+            padding-right: 10px;
+            text-align: left;
+            position: relative;
+            font-size: 15px;
+            z-index: 1;
+            padding-top: 110px;
+        }
+
+        .footer-right a {
+            color: #ffffff;
+            text-decoration: none;
+            text-align: left;
+            padding-right: 50px;
+        }
+
+        .footer-right a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-image {
+            height: 400px;
+            position: relative;
+            margin-right: -30px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="file:///C:/Users/Anu/Documents/HTML/index.html">ANANYA</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/Anu/Downloads/portfolio%20page%202.html" id="eden" style="text-decoration: none; color: #FF670A;">EDEN</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/profile%20page%203.html">PROFILE</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/contact%20page%204.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="postcard-container">
+        
+        <div class="postcard set1" onclick="window.location.href='file:///C:/Users/Anu/fox%20STORY%20PAGE.html'">
+            <img src="https://i.pinimg.com/736x/65/5f/46/655f46d176028ddc337ea8fd72ac2478.jpg" alt="Postcard Background" class="postcard-back">
+            <img src="https://i.pinimg.com/736x/0c/ec/be/0cecbeb32e656e3c467de59e9bb6bde9.jpg" alt="Front Image" class="postcard-front">
+        </div>
+
+        <div class="postcard set2" onclick="window.location.href='file:///C:/Users/Anu/Anya%20thrift.html'">
+            <img src="https://i.pinimg.com/736x/82/4d/5b/824d5ba00fa3cfff3073b003cdc6f7ca.jpg" alt="Postcard Background" class="postcard-back">
+            <img src="https://i.pinimg.com/736x/4a/8f/96/4a8f963d2757df30cbb826675bd14ba6.jpg" alt="Front Image" class="postcard-front">
+        </div>
+
+        <div class="postcard set3" onclick="window.location.href='file:///C:/Users/Anu/Shrooms%20art%20front%20view.html'">
+            <img src="https://i.pinimg.com/736x/9e/e5/6d/9ee56daee1b27cc168c4867ccb5838d9.jpg" alt="Postcard Background" class="postcard-back">
+            <img src="https://i.pinimg.com/736x/fa/8b/d9/fa8bd9ee27321ae7ee30a0c5a6dcf000.jpg" alt="Front Image" class="postcard-front">
+        </div>
+
+        <div class="postcard set4" onclick="window.location.href='file:///C:/Users/Anu/dio%20cat%20Art%20Page.html'">
+            <img src="https://i.pinimg.com/736x/b7/d5/1a/b7d51a6cd428c3cf3a1063c0b6c8f4cf.jpg" alt="Postcard Background" class="postcard-back">
+            <img src="https://i.pinimg.com/736x/c5/64/2d/c5642dc1beddb3f94ca916861adee6a6.jpg" alt="Cat Image" class="postcard-front">
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <p>Bangalore,<br> India</p>
+        </div>
+        <div class="footer-right">
+            <p>
+                <a href="https://www.linkedin.com/in/ananya-biju-6090ba236/">LinkedIn</a><br>
+                <a href="https://www.instagram.com/ananyaabiju/">Instagram</a><br>
+                <a href="https://www.behance.net/ananyabiju">Behance</a><br>
+                <a href="mailto:meananyabijuaq@gmail.com">meananyabiju@gmail.com</a>
+            </p>
+        </div>
+        <img src="https://i.pinimg.com/736x/a8/51/e9/a851e94e908c594c614d1d311d6c40b0.jpg" alt="Duck illustration" class="footer-image">
+    </footer>
+
+</body>
+</html>

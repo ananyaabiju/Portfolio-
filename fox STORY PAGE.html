@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fox and The Stork</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #54624e;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            background-color: #54624e;
+        }
+
+        .logo {
+            font-size: 14.5px;
+            font-weight: regular;
+            color: #ffffff;
+            margin-top: -15px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .logo a:hover {
+            color: #FF670A; 
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-top: 2px;
+        }
+
+        nav ul li {
+            margin-left: 100px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14.5px;
+        }
+
+        nav ul li a:hover {
+            color: #FF670A;
+        }
+
+        .postcard-container {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 55%;
+            transform: translateX(-50%) rotate(90deg);
+        }
+
+        .postcard {
+            position: relative;
+            width: 230px;
+            height: auto;
+            margin: 0;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .postcard img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.4s, z-index 0.4s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .set1 .postcard-back {
+            z-index: 0;
+            transform: rotate(-12deg);
+        }
+
+        .set1 .postcard-front {
+            z-index: 1;
+            transform: rotate(0deg);
+        }
+
+        .postcard:hover {
+            transform: translateX(-10px);
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80vh;
+            padding: 0 50px;
+        }
+
+        .heading {
+            font-family: 'sloop', cursive;
+            font-size: 140px;
+            font-weight: 700;
+            text-align: left;
+            line-height: 1.1;
+            color: rgb(255, 255, 255);
+        }
+
+        .description {
+            width: 40%;
+            font-size: 15px;
+            line-height: 1.5;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(96, 103, 96, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* E-book container */
+        .book-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .page-single img {
+            max-width: 400px;
+            max-height: 500px;
+        }
+
+        .page-double {
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-double img {
+            max-width: 400px;
+            max-height: 500px;
+            margin: 0 10px;
+        }
+
+        /* Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #FF670A;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        #backArrow {
+            left: 60px;
+        }
+
+        #nextArrow {
+            right: 60px;
+        }
+
+        .nav-arrow:hover {
+            color: #FF851A;
+        }
+
+      
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: #FF670A;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="file:///C:/Users/Anu/Documents/HTML/index.html" class="logo">ANANYA</a>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/Anu/Downloads/portfolio%20page%202.html" style="color: #FF670A;">EDEN</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/profile%20page%203.html">PROFILE</a></li>
+                <li><a href="file:///C:/Users/Anu/Downloads/contact%20page%204.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="main-content">
+        <div class="heading">
+            The Fox And<br> The Stork
+        </div>
+        <div class="description">
+            For my project, I illustrated the classic fable "The Fox and the Stork" by Aesop, with a focus on the story’s themes of cleverness and reciprocity. The book cover is designed in a style inspired by ancient Greek art, incorporating clean, geometric lines and traditional motifs to connect with the timeless nature of Aesop’s work. To modernize the aesthetic, I introduced a touch of color to highlight key elements, while maintaining a minimalist approach to ensure the design remains uncluttered and visually engaging. This combination of classic and contemporary styles enhances the overall impact of the cover.
+        </div>
+    </div>
+
+    <!-- Postcard Container -->
+    <div class="postcard-container">
+        <div class="postcard set1" onclick="openEbookModal()">
+            <img src="https://i.pinimg.com/736x/9e/e5/6d/9ee56daee1b27cc168c4867ccb5838d9.jpg" alt="Postcard Background" class="postcard-back">
+            <img src="https://i.pinimg.com/736x/0c/ec/be/0cecbeb32e656e3c467de59e9bb6bde9.jpg" alt="Front image" class="postcard-front">
+        </div>
+    </div>
+
+    <!-- Modal for E-book -->
+    <div class="modal" id="ebookModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="book-container">
+            <div id="pageDisplay" class="page-single">
+                <img id="pageImage" src="https://i.pinimg.com/736x/3b/a9/54/3ba954034e704ed2d44e25fcafa3b66e.jpg" alt="Page 1">
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <span id="backArrow" class="nav-arrow hidden" onclick="prevPage()">←</span>
+        <span id="nextArrow" class="nav-arrow" onclick="nextPage()">→</span>
+    </div>
+
+    <script>
+        const pages = [
+            ['https://i.pinimg.com/736x/3b/a9/54/3ba954034e704ed2d44e25fcafa3b66e.jpg'], // Page 1
+            ['https://i.pinimg.com/736x/e2/65/36/e265363319da383ff9b2c783fd0d34fe.jpg', 'https://i.pinimg.com/736x/b9/4e/a8/b94ea8c3a6c11182bae59b6e53722825.jpg'], // Pages 2-3
+            ['https://i.pinimg.com/736x/4d/46/c5/4d46c5370c0d9758c92081668296bb30.jpg'], // Page 4
+        ];
+
+        let currentPageIndex = 0;
+
+        function openEbookModal() {
+            document.getElementById('ebookModal').style.display = 'flex';
+            updatePageDisplay();
+        }
+
+        function closeModal() {
+            document.getElementById('ebookModal').style.display = 'none';
+            currentPageIndex = 0; // Reset to first page
+            updatePageDisplay();
+        }
+
+        function updatePageDisplay() {
+            const pageDisplay = document.getElementById('pageDisplay');
+            pageDisplay.innerHTML = ''; // Clear previous content
+            const pagesToDisplay = pages[currentPageIndex];
+
+            if (pagesToDisplay.length > 1) {
+                pageDisplay.classList.remove('page-single');
+                pageDisplay.classList.add('page-double');
+                pagesToDisplay.forEach(src => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = "Page";
+                    pageDisplay.appendChild(img);
+                });
+                document.getElementById('backArrow').classList.remove('hidden');
+            } else {
+                pageDisplay.classList.add('page-single');
+                const img = document.createElement('img');
+                img.src = pagesToDisplay[0];
+                img.alt = "Page";
+                pageDisplay.appendChild(img);
+                document.getElementById('backArrow').classList.add('hidden');
+            }
+
+            document.getElementById('nextArrow').style.display = currentPageIndex === pages.length - 1 ? 'none' : 'block';
+        }
+
+        function nextPage() {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                updatePageDisplay();
+            }
+        }
+
+        function prevPage() {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                updatePageDisplay();
+            }
+        }
+    </script>
+</body>
+</html>
